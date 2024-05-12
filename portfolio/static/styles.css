@@ -1,0 +1,29 @@
+body {
+    background-image: url('/static/f.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.titulo {
+    color:blanchedalmond;
+}
+.subtitulo {
+    color:blanchedalmond;
+}
+.cuerpo {
+    color:rgb(98, 98, 201);
+}
+.li {
+    color:blanchedalmond;
+}
+.cuadro-color {
+    background-color: #0a0a0a; /* Cambia el color de fondo a tu preferencia */
+    padding: 20px; /* Espacio alrededor del texto dentro del cuadro */
+    border-radius: 10px; /* Bordes redondeados para el cuadro */
+    width: 1100px; /* Ancho del cuadro */
+    margin: 0 auto; /* Centra el cuadro horizontalmente en la página */
+}
+.texto {
+    color: #ffffff; /* Color del texto (blanco en este caso) */
+    font-size: 18px; /* Tamaño de fuente del texto */
+    text-align: center; /* Alineación del texto al centro */
+}

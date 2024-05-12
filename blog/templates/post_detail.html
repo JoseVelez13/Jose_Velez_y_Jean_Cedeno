@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block content %}
+<body>
+    <div class="cuadro-color">
+      <h1 class="titulo">{{post.title}}</h1>
+      <h2>{{post.date}}</h2>
+      <p class="subtitulo">{{post.description|safe|truncatechars:1000}}</p>
+      <img src="{{post.image.url}}" alt="{{post.tiltle}}">
+    </div>
+</body>
+{% endblock %}

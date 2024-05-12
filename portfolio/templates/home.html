@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% block content %} 
+{% load static %}
+<header class="row bg-black">
+     <div class="col-md-4">
+          <img src="{% static 'jh.jpg' %}" alt="" width="200" height="200">
+     </div>
+     <div class="col-md-8 my-auto">
+          <h1 class="titulo">Hola, me llamo <strong>Jose Velez Q.</strong></h1>
+          <h3 class="subtitulo">Hoy te vengo a enseñar por qué Jhin es un muy buen ADC dentro del vasto mundo de League of Legends</h3>
+          <p class="cuerpo">Jhin es un buen ADC en League of Legends por varias razones:</p>
+          <ul>
+               <li class="li">Alto daño de ataque: Jhin tiene una alta capacidad de infligir daño con sus ataques básicos, especialmente en las fases tempranas y tardías del juego.</li>
+               <li class="li">Capacidad para asegurar eliminaciones: Su pasiva, "Whisper", le permite infligir daño adicional basado en la vida perdida del objetivo, lo que lo hace eficaz para asegurar eliminaciones en peleas de equipo.</li>
+               <li class="li">Habilidad de poke: Jhin puede infligir daño a distancia con su habilidad "Danza de la mortaja" (Q), lo que le permite desgastar a sus oponentes antes de comprometerse en una pelea.</li>
+               <li class="li">Control de multitudes: Con su habilidad "Flor Mortal" (E) y su definitiva "Disparo letal" (R), Jhin puede ralentizar y controlar a los enemigos, facilitando el trabajo en equipo y las eliminaciones.</li>
+               <li class="li">Gran rango de ataque: Jhin tiene uno de los rangos de ataque más largos entre los ADCs, lo que le permite atacar a sus oponentes desde una distancia segura.</li>
+          </ul>
+          <p class="cuerpo">En resumen, Jhin es un ADC efectivo debido a su alto daño, capacidad para asegurar eliminaciones, habilidad de poke, control de multitudes y gran rango de ataque.</p>
+          <a class="btn btn-primary btn-lg rounded-0 my-3" href="{% static 'lol.pdf' %}" target="_blank">Guía de cómo jugar lol</a>
+     </div>
+</header>
+<div class="row my-4 text-center">
+     <h1 class="titulo">Las tres mejores skin de este champ (a mi gusto)</h1>
+     <p>Aquí unos conceptos básicos de Jhin</p>
+     {% for project in projects %}
+     <div class="col-md-4 p-4">
+         <div class="card bg-black card-project">
+           <img src="{{ project.image.url }}" alt="{{ project.title }}" class="card-img-top">
+           <div class="card-body">
+              <h2>{{ project.title }}</h2>
+              <p>{{ project.description }}</p>
+              <br>
+              {% if project.url %}
+                  <a href="{{ project.url }}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{ project.url }}</a>
+              {% endif %} 
+           </div>  
+         </div>
+     </div>
+     {% endfor %}     
+</div>
+{% endblock %}
