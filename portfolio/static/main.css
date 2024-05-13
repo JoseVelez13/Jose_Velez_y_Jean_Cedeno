@@ -10,8 +10,3 @@ body{
     border: 1px solid #fff;
     cursor: pointer;
 }
-body {
-    background-image: url('/f.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-}
