@@ -88,10 +88,14 @@ WSGI_APPLICATION = 'django_portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        # Feel free to alter this value to suit your needs.
-        default=os.environ.get('DATABASE_URL_EXTERNAL'),
-        conn_max_age=600)
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'base_de_datos_proyecto_fcue',
+        'USER': 'base_de_datos_proyecto_fcue_user',
+        'PASSWORD': 'ZfJYAeKNustUdq4hAMk4lSf7gkM8KrmL',
+        'HOST': 'dpg-cov6i9fsc6pc73eomc6g-a',  # O la dirección IP de tu servidor de base de datos
+        'PORT': '5432',       # El puerto por defecto de PostgreSQL es 5432
+    }
 }
 
 
