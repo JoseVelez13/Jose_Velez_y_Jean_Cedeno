@@ -11,7 +11,7 @@ body{
     cursor: pointer;
 }
 body {
-    background-image: url('static/f.jpg');
+    background-image: url('/f.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
